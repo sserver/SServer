@@ -1,4 +1,5 @@
-ss = ss || []
+var ss = ss || [];
+
 // Simulates document ready event (like jquery). Makes asyncronous stuff nicer by having
 // a simple ready event that waits until something is loaded, or if called after load just
 // passes through and executes the function.

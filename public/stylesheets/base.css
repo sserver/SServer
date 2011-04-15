@@ -1,0 +1,14 @@
+html,body{height:100%;color:black;}
+body{background-color:white;font:13.34px helvetica,arial,freesans,clean,sans-serif;*font-size:small;}
+table{font-size:inherit;font:100%;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+input.text{padding:1px 0;}
+body *{line-height:1.4em;}
+img{border:0;}
+abbr{border-bottom:none;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+* html .clearfix{height:1%;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
