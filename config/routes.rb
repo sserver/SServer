@@ -2,7 +2,7 @@ Sserver::Application.routes.draw do |map|
   get "home/index"
 
   map.root :controller => 'home', :action => 'index'
-
+  map.resource :entries, :member => { :callback => :get}
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

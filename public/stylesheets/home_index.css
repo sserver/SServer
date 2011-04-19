@@ -2,3 +2,41 @@
 #fb_suckit { display: none; font-weight:bold;}
 #nice_guys { display: none; font-weight:bold;}
 #no_digits_for_u { display: none; font-weight:bold;}
+
+.cost {
+ text-align:left;
+ color: #fff;
+ background-color: #6699CC;
+ padding: 5px 0 5px 5px;
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.entry {
+  padding: 5px 0 5px 5px;
+  font-size: 16px;
+}
+
+.create_entry {
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  font-size: 24px;
+  float: right;
+  width: 400px;
+  color: #fff;
+  -moz-border-radius:8px; -webkit-border-radius:8px; -khtml-border-radius:8px; border-radius:8px;
+};
+
+.entryBox {
+  border:2px solid #6699CC;
+  width: 500px;
+  color: #003366;
+  -moz-border-radius:8px; -webkit-border-radius:8px; -khtml-border-radius:8px; border-radius:8px;
+}
+
+.roundedBox {
+  background-color: #6699CC;
+  border:1px solid #6699CC;
+  color: #fff;
+  -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px; border-radius:5px;
+}

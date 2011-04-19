@@ -1,0 +1,57 @@
+<% content_for :javascript do %>
+  <script src="http://connect.facebook.net/en_US/all.js"></script>
+<% end %>
+
+<div id="fb-root"></div>
+<div>
+  <%= form_for Entry.new do |f| %>
+    <fieldset>
+      <img src="<%= @photo_url %>"/>
+      <legend>Did I Just Get Suckered?</legend>
+      <div>
+        <%= f.label :Description %><br />
+        <%= f.text_field :description, :row => 3 %>
+      </div>
+      <div>
+        <%= f.label :cost %><br />
+        <%= f.text_field :cost %>
+      </div>
+      <span class="actions">
+        <%= f.submit %>
+      </span>
+    </fieldset>
+  <% end %>
+</div>
+
+<br>
+<br><a href="javascript:void(0)" onClick='$("#fb_suckit").toggle();' class='info'>Don't like logging in with Facebook?</a>
+<div id='fb_suckit'>Please see our FAQ. Oh, also... suck it. We don't want to write another registration system and you dont want to remember another email/password combination.<br>Don't have a Facebook account? Talk to your grandkids, they'll hook you up.</div>
+<br><a href="javascript:void(0)" onClick='$("#nice_guys").toggle();' class='info'>What's out permission policy?</a>
+<div id='nice_guys'>We aren't going to send you any spam or crap you don't want, we have email and Facebook accounts just like you, and we hate douches who do that too...</div>
+<br><a href="javascript:void(0)" onClick='$("#no_digits_for_u").toggle();' class='info'>Want to contact us?</a>
+<div id='no_digits_for_u'>Don't do that... There is really no need for you to talk to us. We are providing you with a free service, lets just keep this whole thing nice and anonymous. Even if you could talk to us, we'd just give you some stripper name like Savannah or Cherrie, and you couldn't ever find us again later, even if you did give us $20</div>
+
+
+<% content_for :footer do %>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({ appId: '160527514007252', status: true, cookie: false, xfbml: false});
+      $(document).ready(function () {
+        FB.getLoginStatus(function(response) {
+          if (response.session) {
+            ss.facebook.userId = response.session.uid;
+          } else {
+            /* No failure code */
+          }
+        });
+        ss.facebook.ssloaded();
+      });
+    };
+    (function() {
+      var e = document.createElement('script'); e.async = true;
+      e.src = document.location.protocol +
+        '//connect.facebook.net/en_US/all.js';
+      document.getElementById('fb-root').appendChild(e);
+    }());
+  </script>
+<% end %>

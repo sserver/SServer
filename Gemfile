@@ -7,6 +7,8 @@ gem 'rails', '3.0.6'
 
 #gem 'sqlite3'
 gem 'pg', :require => 'pg'
+gem 'yajl-ruby'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

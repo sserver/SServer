@@ -3,25 +3,21 @@
 <head>
   <title>Sserver</title>
   <%= stylesheet_link_tag :all %>
+  <script>
+    window.ss = {
+      facebook : {
+        userId : 0
+      }
+    };
+  </script>
   <%= javascript_include_tag :defaults %>
+  <%= yield :javascript %>
   <%= csrf_meta_tag %>
-  <script src="http://connect.facebook.net/en_US/all.js"></script>
 </head>
   <body>
-    <div id="fb-root"></div>
 
     <%= yield %>
 
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({ appId: '160527514007252', status: true, cookie: true, xfbml: true});
-      };
-      (function() {
-        var e = document.createElement('script'); e.async = true;
-        e.src = document.location.protocol +
-          '//connect.facebook.net/en_US/all.js';
-        document.getElementById('fb-root').appendChild(e);
-      }());
-    </script>
+    <%= yield :footer %>
   </body>
 </html>

@@ -1,4 +1,4 @@
-html,body{height:100%;color:black;}
+html,body{height:100%;color: #000044;}
 body{background-color:white;font:13.34px helvetica,arial,freesans,clean,sans-serif;*font-size:small;}
 table{font-size:inherit;font:100%;}
 input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
@@ -12,3 +12,16 @@ abbr{border-bottom:none;}
 * html .clearfix{height:1%;}
 a{color:#4183c4;text-decoration:none;}
 a:hover{text-decoration:underline;}
+
+.title_a { font-size: 44px; font-weight: bold;}
+.title_b { font-size: 18px; font-weight: bold;}
+
+.color0 { color: #000044;} /* Near Black */
+.color2 { color: #6699CC;} /* Light blue */
+.color3 { color: #003366;} /* Dark Blue */
+.color4 { color: #C0C0C0;} /* Light Light Grey */
+
+.backColor0 { background-color: #000044; color: #C0C0C0;} /* Near Black */
+.backColor2 { background-color: #6699CC; color: #fff;} /* Light blue */
+.backColor3 { background-color: #003366; color: #fff;} /* Dark Blue */
+.backColor4 { background-color: #C0C0C0; color: #C0C0C0;} /* Light Light Grey */
